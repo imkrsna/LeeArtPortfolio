@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeeArt</title>
+
+    <!-- सी एस एस -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- गूगल फौंट -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Road+Rage&display=swap" rel="stylesheet">
+
+    <!-- फान्ट औस्म -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- जावास्क्रपट -->
+    <script defer src="index.js"></script>
+
+</head>
+<body>
+    <!-- हेडर -->
+    <div class="navbar">
+        <div class="navbar-logo">LeeArt</div>
+        <div class="navbar-open"><i class="fa-solid fa-bars"></i></div>
+        <div class="navbar-items">
+            <div class="navbar-close"><i class="fa-solid fa-xmark"></i></div>
+            <ul class="navbar-list">
+                <li class="navbar-item"><a href="#home">Home</a></li>
+                <li class="navbar-item"><a href="#about">About</a></li>
+                <li class="navbar-item"><a href="#albums">Albums</a></li>
+                <li class="navbar-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- होम -->
+    <section class="sec-home" id="home">
+        <div class="hero"><img src="./img/hero.jpg" alt="hero.jpg"></div>
+        <div class="hero-title">“I am somewhat an artist myself<br>~ Leah Giannantonio”</div>
+    </section>
+
+    <!-- अबाउट -->
+    <section class="sec-about" id="about">
+        <div class="sec-about-left"><img src="./img/pfp.png" alt="pfp.png" class="sec-about-pfp"></div>
+        <div class="sec-about-right">
+            <div class="sec-about-name">Leah Giannantonio</div>
+            <div class="sec-about-pro">Communications, Writing and AI Art Professional</div>
+            <div class="sec-about-sub">About</div>
+            <div class="sec-about-text">Hi, I am Leah Giannantonio and as a skilled communications and writing professional with a passion for AI technology, I am dedicated to creating compelling and engaging content for my clients. My bachelor's degree in Communications, along with my minors and background in AI image generation, have equipped me with the necessary skills and knowledge to produce high-quality work that meets the unique needs of my clients. I am always seeking new opportunities to utilize my expertise and creativity to help clients achieve their goals through the use of innovative digital solutions. My self-motivation and adaptability make me a valuable asset to any team.</div>
+        </div>
+    </section>
+
+    <!-- एलबमस -->
+    <section class="sec-albums" id="albums">
+        <div class="sec-albums-head">Albums</div>
+        <div class="sec-albums-card-holder">
+            <div class="sec-albums-card-btn" id="albums-slid-left" onclick="showPreviousAlbum()">
+                <i class="fa-solid fa-angle-left"></i>
+            </div>
+            <div class="sec-albums-cards">
+                <div class="sec-albums-card album-visible">
+                    <div class="sec-albums-card-img"><img src="./img/albums/worldbuildings.webp" alt="worldbuildings.webp"></div>
+                    <div class="sec-albums-card-about">
+                        <div class="sec-albums-card-head">Worldbuildings</div>
+                        <div class="sec-albums-card-text">A collection of detailed landscape art aimed to showcase and explore places that have never been</div>
+                    </div>
+                </div>
+                <div class="sec-albums-card">
+                    <div class="sec-albums-card-img"><img src="./img/albums/theimpossible.webp" alt="theimpossible.webp"></div>
+                    <div class="sec-albums-card-about">
+                        <div class="sec-albums-card-head">The Impossible</div>
+                        <div class="sec-albums-card-text">Using AI to surpass the expected by expanding creative limits whilst maintaining realism</div>
+                    </div>
+                </div>
+                <div class="sec-albums-card">
+                    <div class="sec-albums-card-img"><img src="./img/albums/etrianodyssey.webp" alt="etrianodyssey.webp"></div>
+                    <div class="sec-albums-card-about">
+                        <div class="sec-albums-card-head">Etrian Odyssey IV</div>
+                        <div class="sec-albums-card-text">An exhibition of prompt building skills through visual recreations of video game stages</div>
+                    </div>
+                </div>
+                <div class="sec-albums-card">
+                    <div class="sec-albums-card-img"><img src="./img/albums/characters.webp" alt="characters.webp"></div>
+                    <div class="sec-albums-card-about">
+                        <div class="sec-albums-card-head">Characters</div>
+                        <div class="sec-albums-card-text">A diverse collection of portraits showcasing a range of artistic styles and techniques</div>
+                    </div>
+                </div>
+            </div>
+            <div class="sec-albums-card-btn" id="albums-slid-right" onclick="showNextAlbum()">
+                <i class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- कोनटेक्ट -->
+    <section class="sec-contact" id="contact">
+        <div class="sec-contact-hero"><img src="./img/contact_hero.jpg" alt="contact_hero.jpg"></div>
+        <div class="sec-contact-form">
+            <div class="sec-contact-form-head">Contact</div>
+            <div class="sec-contact-form-sec">
+                <div class="sec-contact-form-inp">
+                    <div class="sec-contact-form-sec-head">First Name</div>
+                    <input type="text" name="firstName" id="firstName">
+                </div>
+                <div class="sec-contact-form-inp">
+                    <div class="sec-contact-form-sec-head">Second Name</div>
+                    <input type="text" name="secondName" id="secondName">
+                </div>
+            </div>
+            <div class="sec-contact-form-sec">
+                <div class="sec-contact-form-inp">
+                    <div class="sec-contact-form-sec-head">Email</div>
+                    <input type="email" name="email" id="email">
+                </div>
+            </div>
+            <div class="sec-contact-form-sec">
+                <div class="sec-contact-form-inp">
+                    <div class="sec-contact-form-sec-head">Message</div>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="sec-contact-form-sec">
+                <div class="sec-contact-form-inp">
+                    <div class="sec-contact-btn">SEND</div>
+                </div>
+            </div>
+        </div>
+        <div class="sec-contact-footer">
+            <div class="sec-contact-footer-text">©2023 by Leah Giannantonio</div>
+            <div class="sec-contact-footer-links">
+                <div class="sec-contact-footer-link"><a href="https://twitter.com/putitintheAI" target="_blank"><i class="fa-brands fa-twitter"></i></a></div>
+                <div class="sec-contact-footer-link"><a href="https://www.discordapp.com/users/277326889058828289" target="_blank"><i class="fa-brands fa-discord"></i></a></div>
+                <div class="sec-contact-footer-link"><a href="https://www.instagram.com/daucus.lee/" target="_blank"><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="sec-contact-footer-link"><a href="https://www.linkedin.com/in/leah-giannantonio-95a35b1b2/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <canvas id="fireflies"></canvas> -->
+</body>
+</html>

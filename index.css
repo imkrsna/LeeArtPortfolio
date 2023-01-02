@@ -1,0 +1,538 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: #030406;
+    font-family: 'Road Rage', cursive;
+    font-size: 10px;
+}
+
+/* नेवबार खंड */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+
+    width: 100%;
+    height: 8rem;
+    display: flex;
+
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 3rem;
+}
+
+.navbar-logo {
+    color: #FFF;
+    font-size: 4rem;
+}
+
+.navbar-items {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30rem;
+    height: 100vh;
+    padding-top: 5rem;
+    background-color: #FFF;
+    transform: translateX(100%);
+    transition: 0.2s ease-in-out;
+}
+
+.navbar-active {
+    transform: translateX(0%);
+}
+
+.navbar-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    list-style: none;
+}
+
+.navbar-item {
+    padding-top: 2rem;
+    font-size: 3.5rem;
+}
+
+.navbar-item a {
+    color: #000;
+    text-decoration: none;
+}
+
+.navbar-open {
+    font-size: 2.5rem;
+    color: #FFF;
+}
+
+.navbar-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2.5rem 3rem;
+    color: #000;
+    font-size: 3rem;
+}
+
+/* होम */
+
+.sec-home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.hero-title {
+    text-align: center;
+    color: #FFF;
+    font-size: 4rem;
+    z-index: 10;
+}
+
+/* अबाउट */
+.sec-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    color: #FFF;
+}
+
+.sec-about-left,
+.sec-about-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    padding: 5rem;
+}
+
+.sec-about-pfp {
+    width: 100%;
+}
+
+.sec-about-name {
+    font-size: 5rem;
+}
+
+.sec-about-pro {
+    color: #C6C6C6;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.sec-about-sub {
+    font-size: 3rem;
+}
+
+.sec-about-text {
+    color: #C6C6C6;
+    font-size: 2rem;
+}
+
+/* एलबमस खंड*/
+
+.sec-albums {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+    padding-top: 8rem;
+    color: #FFF;
+}
+
+.sec-albums-head {
+    font-size: 4rem;
+    border-bottom: 3px solid #FFF;
+}
+
+.sec-albums-card-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 2rem;
+}
+
+.sec-albums-cards {
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #FFF;
+}
+
+@keyframes fade-in {
+    from {opacity: 0.5; }
+    to {opacity: 1;}
+}
+
+@keyframes fade-out {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.sec-albums-card {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.album-visible {
+    display: flex;
+    animation: 1s fade-in;
+}
+
+.sec-albums-card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.sec-albums-card-img img {
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.sec-albums-card-about {
+    text-align: center;
+    color: #000;
+    height: 14rem;
+}
+
+.sec-albums-card-head {
+    font-size: 4rem;
+}
+
+.sec-albums-card-text {
+    color: #555555;
+    font-size: 2.5rem;
+}
+
+.sec-albums-card-btn {
+    font-size: 2rem;
+}
+
+.sec-albums-card-btn#albums-slid-right {
+    margin: 0 0 0 2rem;
+}
+
+.sec-albums-card-btn#albums-slid-left {
+    margin: 0 2rem 0 0;
+}
+
+/* कानटेकट खंड */
+.sec-contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0 2rem;
+    color: #FFF;
+}
+
+.sec-contact-hero img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 40%;
+    transform: translateY(-50%);
+    z-index: -10;
+    opacity: 0.8;
+}
+
+.sec-contact-form {
+    padding: 1rem;
+    border: 0.5rem solid #FFF;
+    border-radius: 1.5rem;
+    background: url("./img/form_bg.jpg");
+}
+
+.sec-contact-form-head {
+    text-align: center;
+    text-decoration: 0.2rem underline;
+    font-size: 4rem;
+}
+
+.sec-contact-form-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.sec-contact-form-inp {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.sec-contact-form-inp input {
+    height: 2.8rem;
+}
+
+.sec-contact-form-inp input, 
+.sec-contact-form-inp textarea {
+    width: 100%;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    resize: none;
+}
+
+.sec-contact-btn {
+    font-size: 3rem;
+    background-color: #2D807C;
+    text-align: center;
+}
+
+.sec-contact-form-sec-head {
+    font-size: 2rem;
+}
+
+.sec-contact-footer {
+    position: absolute;
+    text-align: center;
+    bottom: 1rem;
+    color: #C6C6C6;
+    font-family: monospace;
+    font-size: 1.8rem;
+}
+
+.sec-contact-footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-contact-footer-link a{
+    text-decoration: none;
+    color: #C6C6C6;
+    padding: 0 1rem;
+}
+
+#fireflies {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* मोबाइल खंड */
+
+@media only screen and (min-width: 768px) {
+
+    /* नेवबार खंड */
+    .navbar {
+        padding: 0 7rem;
+    }
+
+    .navbar-logo {
+        color: #FFF;
+        font-size: 4rem;
+    }
+
+    .navbar-items {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0;
+        background-color: transparent;
+        transform: translateX(0%);
+    }
+
+    .navbar-open,
+    .navbar-close {
+        display: none;
+    }
+
+    .navbar-list {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    }
+
+    .navbar-item {
+        margin: 0 0 0 4rem;
+        font-size: 3rem;
+    }
+
+    .navbar-item a {
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    .navbar-item:hover {
+        border-bottom: 0.3rem solid #FFF;
+        margin-bottom: -0.3rem;
+    }
+
+
+    /* होम खंड */
+    .hero-title {
+        font-size: 9rem;
+    }
+
+    /* अबाउट खंड */
+    .sec-about {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 100vh;
+        padding-top: 8rem;
+    }
+
+    .sec-about-left {
+        padding: 0 5rem 0 10rem;
+        align-items: center;
+    }
+
+    .sec-about-right {
+        padding: 0 10rem 0 0;
+    }
+
+    .sec-about-pfp {
+        width: 100%;
+        max-width: 368px;
+    }
+
+    .sec-about-name {
+        font-size: 9rem;
+    }
+
+    .sec-about-pro {
+        color: #C6C6C6;
+        font-size: 2.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .sec-about-sub {
+        font-size: 5rem;
+    }
+
+    .sec-about-text {
+        color: #C6C6C6;
+        font-size: 3rem;
+    }
+
+    /* एलबम खंड */
+    .sec-albums-head {
+        font-size: 4rem;
+        border-bottom: 3px solid #FFF;
+    }
+
+    .sec-albums-card-holder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75%;
+        min-width: 85rem;
+    }
+
+    .sec-albums-cards {
+        border-radius: 2rem;
+    }
+
+    .sec-albums-card {
+        flex-direction: row;
+        border-radius: 2rem;
+        padding: 3rem;
+    }
+
+    .album-visible {
+        display: flex;
+    }
+
+    .sec-albums-card-img {
+        width: 50%;
+        margin: 0;
+    }
+
+    .sec-albums-card-img img {
+        border-radius: 1rem;
+        width: 100%;
+    }
+
+    .sec-albums-card-about {
+        width: 50%;
+        height: 100%;
+        padding: 0 0 0 4rem;
+    }
+
+    .sec-albums-card-head {
+        font-size: 6rem;
+    }
+
+    .sec-albums-card-text {
+        font-size: 3rem;
+    }
+
+    .sec-albums-card-btn {
+        font-size: 3rem;
+    }
+
+    .sec-albums-card-btn#albums-slid-right {
+        padding: 0 0 0 5rem;
+        margin: 0;
+    }
+
+    .sec-albums-card-btn#albums-slid-left {
+        padding: 0 5rem 0 0;
+        margin: 0;
+    }
+
+    /* कानटेकट खंड */
+    
+    .sec-contact-hero img {
+        height: auto;
+    }
+    .sec-contact-form {
+        padding: 2rem;
+    }
+}
